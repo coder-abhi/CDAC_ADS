@@ -41,5 +41,8 @@ public class Queue implements QueueInterface {
 		
 		return 0;
 	}
+	public void clear() {
+		this.front = this.rear = -1;
+	}
 
 }

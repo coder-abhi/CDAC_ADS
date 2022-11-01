@@ -27,7 +27,9 @@ public class StackUsingQueue implements StackInterface {
 	@Override
 	public void push(int element) {
 		if(!isFull()) {
+			copy(queueMain,queueTemp);
 			queueMain.addQ(element);
+			copy(queueTemp,queueMain);
 		}
 		else System.out.println("Stack is Already Full!!");
 	}
@@ -35,9 +37,9 @@ public class StackUsingQueue implements StackInterface {
 	@Override
 	public int pop() {
 		if(!isEmpty()) {
-			copy(this.queueMain,this.queueTemp);
-			int resultEle = this.queueTemp.deleteQ();
-			copy(this.queueTemp, this.queueMain);
+//			copy(this.queueMain,this.queueTemp);
+			int resultEle = this.queueMain.deleteQ();
+//			copy(this.queueTemp, this.queueMain);
 			return resultEle;
 		}
 		else System.out.println("Stack is Already Empty!!");
@@ -47,6 +49,7 @@ public class StackUsingQueue implements StackInterface {
 	private void copy(Queue q1, Queue q2) {
 		while(!q1.isEmpty()) {
 			q2.addQ(q1.deleteQ());
+			q2.clear();
 		}
 	}
 	
