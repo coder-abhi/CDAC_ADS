@@ -15,12 +15,13 @@ public class TreeTester {
 		t.insertOnePointer(1);
 		t.insertOnePointer(10);
 		t.insertOnePointer(14);
+		t.insertOnePointer(15);
 		t.PrintInorder();
 		
 		t.deleteAll();
 		System.out.println("After Delete");
 		t.PrintInorder();
-//		System.out.println(t.count);
+		System.out.println(t.height());
 	}
 
 }

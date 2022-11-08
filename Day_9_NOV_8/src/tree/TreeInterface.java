@@ -6,6 +6,8 @@ public interface TreeInterface {
 	void delete(int element);
 	void deleteAll();
 	
+	int height();
+	
 	void PrintInorder();
 	void PrintPostorder();
 	void PrintPreorder();

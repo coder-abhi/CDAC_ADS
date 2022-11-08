@@ -108,6 +108,16 @@ public class Tree implements TreeInterface{
 		deleteNode(root);
 	}
 
+	public int CountHeight(Node root) {
+		if(root == null ) return 0;
+		return 1 + Math.max(CountHeight(root.left), CountHeight(root.right));
+	}
+
+	@Override
+	public int height() {
+		return CountHeight(root);
+	}
+
 
 
 }
