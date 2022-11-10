@@ -11,16 +11,16 @@
 - [x] Implement Queue Using Stack - [Code](./Day_2_OCT_31/src/queueUsingStack/)
 - [x] Implement Stack Using Queue - [Code](./Day_2_OCT_31/src/stackUsingQueue/)
 - [x] Reverse last N elements in Stack - [Answer](./Day_2_OCT_31/src/reverseInStack/)
-- [] Circular queue - [To Do]()
+- [ ] Circular queue - [To Do]()
 -  J-Unit test cases
 
 ## Day 3 
 - [x] Singly Linked List - [Code](./Day_3_NOV_01/src/linkedList/)
 - [x] Sorted Linked List - [Code](./Day_3_NOV_01/src/linkedListSorted/)
-- [] Reverse a Linked List
+- [ ] Reverse a Linked List
     - Using stack
     - Using only Pointers
-- [] Merge 2 Sorted Linked List
+- [ ] Merge 2 Sorted Linked List
 
 
 ## Day 4
@@ -32,10 +32,10 @@
 
 ## Day 6
 - [x] Circular Linked List
-- [] Doubly Circular Linked List - [Code](./Day_6_NOV_4/src/doublyLinkedList/)
+- [ ] Doubly Circular Linked List - [Code](./Day_6_NOV_4/src/doublyLinkedList/)
 
 ## Day 8
-- [] Using array to allocate memory for all nodes of a Linked list
+- [ ] Using array to allocate memory for all nodes of a Linked list
 - [X] Recursion - [Code](./Day_8_NOV_7/src/recursion/)
     - [x] Divide without using '/' 
     - [x] Multiply Without using '*'
@@ -44,7 +44,7 @@
 
 ## Tree
 - [x] Tree
-- [] Binary Tree
+- [ ] Binary Tree
     - [x] Insert
     - [x] Printing in Inorder - Using Recursion
     - [x] Printing in Preorder - Using Recursion
@@ -52,9 +52,9 @@
     - [x] Printing in Inorder - Without using Recursion
     - [x] Printing in Preorder - Without using Recursion
     - [x] Printing in Postorder - Without using Recursion
-    - [] Count no. of leaf node in BST
-    - [] Count frequency of Node in binary tree
-    - [] Mirror of tree / Inversion of tree
+    - [ ] Count no. of leaf node in BST
+    - [ ] Count frequency of Node in binary tree
+    - [ ] Mirror of tree / Inversion of tree
     - [x] Search and delete in BST
 
     
