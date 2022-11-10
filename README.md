@@ -1,9 +1,15 @@
-# CDAC_ADS
+<div align="center">
+    <h1> Advance Data Structure</h1>
+    <i>All the assignments of Advance Data Structure in CDAC ACTS</i>
+    <br/>
+    <i>by @coder-abhi</i>
+</div>
+<br />
 
 ## Day 1
 - Time Complexity and Space complexities
-- [x] Implement Queue - [Code](./Day_1_OCT_29/src/queue)
-- [x] Implement Queue Generic - [Code](./Day_1_OCT_29/src/queueGeneric/)
+- [x] Queue using array- [Code](./Day_1_OCT_29/src/queue)
+- [x] Queue Generic - [Code](./Day_1_OCT_29/src/queueGeneric/)
 - [x] Implement Stack - [Code](./Day_1_OCT_29/src/stack/)
 - [x] Implement Stack Generic - [Code](./Day_1_OCT_29/src/stackGeneric/)
 
@@ -17,10 +23,6 @@
 ## Day 3 
 - [x] Singly Linked List - [Code](./Day_3_NOV_01/src/linkedList/)
 - [x] Sorted Linked List - [Code](./Day_3_NOV_01/src/linkedListSorted/)
-- [ ] Reverse a Linked List
-    - Using stack
-    - Using only Pointers
-- [ ] Merge 2 Sorted Linked List
 
 
 ## Day 4
@@ -28,6 +30,10 @@
 - [x] Stack Using Linked List - [Code](./Day_4_NOV_02/src/stackUsingLinkedList/)
 
 ## Day 5
+- [ ] Reverse a Linked List
+    - Using stack
+    - Using only Pointers
+- [ ] Merge 2 Sorted Linked List
 - [x] Doubly Linked List - [Code](./Day_5_NOV_03/src/doublyLinkedList/)
 
 ## Day 6
@@ -42,22 +48,49 @@
     - [x] Find Reminder without using '%'
     - [x] Find factorial
 
-## Tree
+### Tree
 - [x] Tree
-- [ ] Binary Tree
-    - [x] Insert
+- [ ] Tree
     - [x] Printing in Inorder - Using Recursion
     - [x] Printing in Preorder - Using Recursion
     - [x] Printing in Postorder - Using Recursion
-    - [x] Printing in Inorder - Without using Recursion
-    - [x] Printing in Preorder - Without using Recursion
-    - [x] Printing in Postorder - Without using Recursion
-    - [ ] Count no. of leaf node in BST
+    - [x] Printing in Inorder - Iterative
+    - [x] Printing in Preorder - Iterative
+    - [x] Printing in Postorder - Iterative
     - [ ] Count frequency of Node in binary tree
+
+## Day 9
+- [ ] Binary Search Tree
+    - [x] Insert
     - [ ] Mirror of tree / Inversion of tree
     - [x] Search and delete in BST
-
+    - [ ] Count no. of leaf node in BST
+    - [ ] Lever order printing
+    - [ ] Height of Tree - using recursion
+    - [ ] Height of tree - without recursion
+- [ ] Build a tree having unique values with
+    - [ ] Inorder and Preorder traversal 
+    - [ ] Inorder and Postorder traversal
+- [ ] find smallest element in a binary search tree
+- [ ] find largest element in a binary search tree.
     
+## Day 10
+- [ ] AVL Tree
+- [ ] Red Black tree
+- [ ] Trie
+- [ ] B Tree
+- [ ] B+ Tree
+- [ ] Linear search
+- [ ] Binary search
+- [ ] Find element in sorder array whick is rotated by K elements
+
+## Day 11
+- [ ] Bubble sort
+- [ ] Selection sort
+- [ ] Insertion sort
+- [ ] Quick sort - Dovide and Conquere
+- [ ] Merge sort
+- [ ] Heap sort
 
 
 
