@@ -1,12 +1,14 @@
-package com.acts.queueGeneric;
+package queueUsingStack;
 
-public class QueueTester {
+public class QueueUsingStackTester {
 
 	public static void main(String[] args) {
-		Queue<String> queue = new Queue<String>(5);
-		queue.addQ("Hello");
-		queue.addQ("Mr ...");
-		queue.addQ("Howwww");
+		QueueUsingStack queue = new QueueUsingStack(5);
+		queue.addQ(12);
+		queue.addQ(22);
+		queue.addQ(22);
+		queue.addQ(32);
+		System.out.println(queue.deleteQ());
 		System.out.println(queue.deleteQ());
 		System.out.println(queue.deleteQ());
 		System.out.println(queue.deleteQ());

@@ -1,4 +1,4 @@
-package com.acts.stackUsingQueue;
+package stackUsingQueue;
 
 public interface StackInterface {
 	boolean isEmpty();

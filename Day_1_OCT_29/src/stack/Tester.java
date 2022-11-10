@@ -1,4 +1,4 @@
-package com.acts.stack;
+package stack;
 
 public class Tester {
 

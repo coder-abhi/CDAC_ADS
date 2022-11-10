@@ -1,4 +1,4 @@
-package com.acts.queueUsingStack;
+package queueUsingStack;
 
 public interface QueueInterface {
 	public void addQ(int element);

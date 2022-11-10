@@ -1,15 +1,14 @@
-package com.acts.stackGeneric;
+package stack;
 
-public class Stack<T> implements StackInterface<T> {
-	T stackArray[];
+public class Stack implements StackInterface {
+	int stackArray[];
 	public int top ;
 	int size;
 	
 	// Constructor
-	@SuppressWarnings("unchecked")
 	Stack(int length){
 		this.size = length;
-		this.stackArray = (T[]) new Object[length];
+		this.stackArray = new int[length];
 		this.top = -1;
 	}
 	
@@ -26,7 +25,7 @@ public class Stack<T> implements StackInterface<T> {
 	}
 	
 	@Override
-	public void push(T element) {
+	public void push(int element) {
 		if(!isFull()) {
 			stackArray[++this.top] = element;
 		}
@@ -34,11 +33,11 @@ public class Stack<T> implements StackInterface<T> {
 	}
 
 	@Override
-	public T pop() {
+	public int pop() {
 		if(!isEmpty()) {
 			return stackArray[this.top--];
 		}
 		else System.out.println("Stack is Already Empty!!");
-		return null;
+		return -1;
 	}
 }

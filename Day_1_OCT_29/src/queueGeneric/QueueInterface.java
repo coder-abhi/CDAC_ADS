@@ -1,4 +1,4 @@
-package com.acts.queueGeneric;
+package queueGeneric;
 
 public interface QueueInterface<T> {
 	public T deleteQ();

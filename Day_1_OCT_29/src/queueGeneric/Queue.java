@@ -1,4 +1,4 @@
-package com.acts.queueGeneric;
+package queueGeneric;
 
 public class Queue <T> implements QueueInterface {
 

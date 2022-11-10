@@ -1,4 +1,4 @@
-package com.acts.stack;
+package queueUsingStack;
 
 public class Stack implements StackInterface {
 	int stackArray[];

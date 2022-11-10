@@ -1,4 +1,4 @@
-package com.acts.queueUsingStack;
+package queueUsingStack;
 
 public class QueueUsingStack implements QueueInterface {
 

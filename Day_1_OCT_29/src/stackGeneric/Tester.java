@@ -1,4 +1,4 @@
-package com.acts.stackGeneric;
+package stackGeneric;
 
 public class Tester {
 

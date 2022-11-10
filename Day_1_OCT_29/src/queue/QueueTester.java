@@ -1,14 +1,15 @@
-package com.acts.queueUsingStack;
+package queue;
 
-public class QueueUsingStackTester {
+public class QueueTester {
 
 	public static void main(String[] args) {
-		QueueUsingStack queue = new QueueUsingStack(5);
-		queue.addQ(12);
-		queue.addQ(22);
-		queue.addQ(22);
-		queue.addQ(32);
-		System.out.println(queue.deleteQ());
+		Queue queue = new Queue(5);
+		queue.addQ(15);
+		
+		
+		
+		queue.addQ(25);
+		queue.addQ(88);
 		System.out.println(queue.deleteQ());
 		System.out.println(queue.deleteQ());
 		System.out.println(queue.deleteQ());
