@@ -2,7 +2,7 @@
     <h1> Advance Data Structure</h1>
     <i>All the assignments of Advance Data Structure in CDAC ACTS</i>
     <br/>
-    <i>by @coder-abhi</i>
+    <i>by <a href="https://github.com/coder-abhi">~ Abhi Kamble </a></i>
 </div>
 <br />
 
