@@ -6,6 +6,12 @@ public class Tree implements TreeInterface{
 		root = null;
 
 	}
+	
+	public void swapNode(Node a, Node b) {
+		int temp = a.data;
+		a.data = b.data;
+		b.data = temp;
+	}
 
 	//Inserting Element using 2 pointer
 	@Override
@@ -52,15 +58,54 @@ public class Tree implements TreeInterface{
 		}
 
 	}
+	
+	// TODO delete element
 	@Override
+	
 	public void delete(int element) {
 		Node curr = root;
 		Node prev = null;
 		while(curr != null) {
+			if(element == curr.data) {
+				// If element is leaf node
+				if(curr.right == null && curr.left == null) {
+					if(element < prev.data) prev.left = null;
+					else prev.right = null;
+					return;
+				}
+				
+				// if element have only right child
+				if(curr.left == null) {
+					if(element < prev.data) prev.left = curr.right;
+					else prev.right = curr.right;
+					return;
+				}
+				
+				// if element have only left child
+				if(curr.right == null) {
+					if(element < prev.data) prev.left = curr.left;
+					else prev.right = curr.left;
+					return;
+				}
+				
+				// If element have both left and right
+				Node TempPrev = curr;
+				Node temp = curr.right;
+				while(temp.left != null) {
+					TempPrev = temp;
+					temp = temp.left;
+				}
+				
+				if(temp.data
+						< TempPrev.data) TempPrev.left = curr.right;
+				else TempPrev.right = curr.right;
+				 return;
+				
+			}
+			
 			prev = curr;
-			if(element == curr.data)
-				if(element < curr.data) curr = curr.left;
-				else curr = curr.right;
+			if(element < curr.data) curr = curr.left;
+			else curr = curr.right;
 		}
 	}
 	public void Inorder(Node head) {
@@ -82,7 +127,7 @@ public class Tree implements TreeInterface{
 	}
 	@Override
 	public void PrintInorder() {
-		Inorder(root);
+		if(root != null) Inorder(root);
 	}
 
 	@Override
