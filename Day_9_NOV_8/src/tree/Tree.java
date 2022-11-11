@@ -39,13 +39,13 @@ public class Tree{
 
 	public void Preorder(Node head) {
 		System.out.print(head.data + " ");
-		if(head.left != null) Inorder(head.left);
-		if(head.right != null) Inorder(head.right);
+		if(head.left != null) Preorder(head.left);
+		if(head.right != null) Preorder(head.right);
 	}
 
 	public void Postorder(Node head) {
-		if(head.left != null) Inorder(head.left);
-		if(head.right != null) Inorder(head.right);
+		if(head.left != null) Postorder(head.left);
+		if(head.right != null) Postorder(head.right);
 		System.out.print(head.data + " ");
 	}
 	
@@ -145,6 +145,27 @@ public class Tree{
 		}
 	}
 	
+	public void IterativePostOrder() {
+		if(root == null) return;
+		
+		Stack<Node> stack1 = new Stack<>();
+		Stack<Node> stack2 = new Stack<>();
+		
+		Node currentNode = root;
+		stack1.push(currentNode);
+		while(!stack1.isEmpty()) {
+			
+			Node ele = stack1.pop();
+			stack2.push(ele);
+			
+			if(ele.left != null) stack1.push(ele.left);
+			if(ele.right != null) stack1.push(ele.right);
+		}
+		while(!stack2.isEmpty()) {
+			System.out.print(stack2.pop().data + " ");
+		}
+	}
+	
 	public Node InversionOfTree(Node root) {
 		if(root == null) return null;
 		root.left = InversionOfTree(root.left);
@@ -153,5 +174,27 @@ public class Tree{
 		root.left = root.right;
 		root.right = ref;
 		return root;
+	}
+	public int maxInTree() {
+		return maxTreeRecursive(this.root,Integer.MIN_VALUE);
+	}
+	public int maxTreeRecursive(Node root,int maximum) {
+		
+		if(root==null) return maximum;
+		
+		maximum = Math.max(root.data, maximum);
+		return Math.max(maxTreeRecursive(root.left,maximum), maxTreeRecursive(root.right,maximum)); 
+	}
+
+	
+	public int minInTree() {
+		return minTreeRecursive(this.root,Integer.MAX_VALUE);
+	}
+	public int minTreeRecursive(Node root,int minimum) {
+		
+		if(root==null) return minimum;
+		
+		minimum = Math.min(root.data, minimum);
+		return Math.min(minTreeRecursive(root.left,minimum), minTreeRecursive(root.right,minimum)); 
 	}
 }
