@@ -1,113 +1,36 @@
 package tree;
 
-public class Tree implements TreeInterface{
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Tree{
 	Node root;
+	public static Scanner sc = new Scanner(System.in);
 	public Tree() {
 		root = null;
-
 	}
 	
-	public void swapNode(Node a, Node b) {
-		int temp = a.data;
-		a.data = b.data;
-		b.data = temp;
+	// Creating a Tree
+	public void createTree() {
+		System.out.println("Enter Root data : ");
+		this.root = addElement(root);
 	}
-
-	//Inserting Element using 2 pointer
-	@Override
-	public void insertTwoPointer(int element) {
-		Node newNode = new Node(element);
-		if(root == null) {
-			root = newNode;
-			return;
+	public Node addElement(Node root) {
+		int data = sc.nextInt();
+		if(data == -1) return null;
+		root = new Node(data);
+		System.out.println("Enter left of "+ root.data);
+		root.left =  addElement(root.left);
+		
+		System.out.println("Enter right of :"+ root.data);
+		root.right = addElement(root.right);
+		
+		return root;
 		}
-		Node curr = root;
-		Node prev = null;
-		while(curr != null) {
-			prev = curr;
-			if(element < curr.data) curr = curr.left;
-			else curr = curr.right;
-		}
-		if(element < prev.data) prev.left = newNode;
-		else prev.right = newNode;
-	}
-
-
-	@Override
-	public void insertOnePointer(int element) {
-		Node newNode = new Node(element);
-		if(root == null) {
-			root = newNode;
-			return;
-		}
-		Node curr = root;
-		while(true) {
-			if(element < curr.data) {
-				if(curr.left != null) curr = curr.left;
-				else {
-					curr.left = newNode;
-					return;
-				}
-			}else {
-				if(curr.right != null) curr = curr.right;
-				else {
-					curr.right = newNode;
-					return;
-				}
-			}
-		}
-
-	}
 	
-	// TODO delete element
-	@Override
-	
-	public void delete(int element) {
-		Node curr = root;
-		Node prev = null;
-		while(curr != null) {
-			if(element == curr.data) {
-				// If element is leaf node
-				if(curr.right == null && curr.left == null) {
-					if(element < prev.data) prev.left = null;
-					else prev.right = null;
-					return;
-				}
-				
-				// if element have only right child
-				if(curr.left == null) {
-					if(element < prev.data) prev.left = curr.right;
-					else prev.right = curr.right;
-					return;
-				}
-				
-				// if element have only left child
-				if(curr.right == null) {
-					if(element < prev.data) prev.left = curr.left;
-					else prev.right = curr.left;
-					return;
-				}
-				
-				// If element have both left and right
-				Node TempPrev = curr;
-				Node temp = curr.right;
-				while(temp.left != null) {
-					TempPrev = temp;
-					temp = temp.left;
-				}
-				
-				if(temp.data
-						< TempPrev.data) TempPrev.left = curr.right;
-				else TempPrev.right = curr.right;
-				 return;
-				
-			}
-			
-			prev = curr;
-			if(element < curr.data) curr = curr.left;
-			else curr = curr.right;
-		}
-	}
+	// Printing Tree
 	public void Inorder(Node head) {
 		if(head.left != null) Inorder(head.left);
 		System.out.print(head.data + " ");
@@ -125,29 +48,26 @@ public class Tree implements TreeInterface{
 		if(head.right != null) Inorder(head.right);
 		System.out.print(head.data + " ");
 	}
-	@Override
+	
 	public void PrintInorder() {
 		if(root != null) Inorder(root);
 	}
 
-	@Override
 	public void PrintPostorder() {
-		Postorder(root);		
+		if(root != null) Postorder(root);		
 	}
 
-	@Override
 	public void PrintPreorder() {
-		Preorder(root);
+		if(root != null) Preorder(root);
 	}
 
-	
+	// deleteNode recursive function for deleting all nodes
 	public void deleteNode(Node root) {
 		if(root.left != null) deleteNode(root.left);
 		if(root.right != null) deleteNode(root.right);
 		root.data = -1;
 	}
-	
-	@Override
+
 	public void deleteAll() {
 		if(root == null) return;
 		deleteNode(root);
@@ -158,11 +78,80 @@ public class Tree implements TreeInterface{
 		return 1 + Math.max(CountHeight(root.left), CountHeight(root.right));
 	}
 
-	@Override
 	public int height() {
 		return CountHeight(root);
 	}
-
-
-
+	
+	public void levelOrderPrint() {
+		Queue<Node> queue = new LinkedList<Node>();
+		queue.add(root);
+		queue.add(null);
+		while(!queue.isEmpty()) {
+			Node ele = queue.remove();
+			
+			if(ele == null) {
+				System.out.println();
+				if(!queue.isEmpty()) queue.add(null);
+				continue;
+			}
+			
+			System.out.print(ele.data + " ");
+			
+			if(ele.left != null) queue.add(ele.left);
+			if(ele.right!= null) queue.add(ele.right);
+		}
+	}
+	
+	public void IterativeInOrder() {
+		Stack<Node> stack = new Stack<Node>();
+		Node currentNode = root;
+		while(currentNode != null) {
+			stack.push(currentNode);
+			currentNode = currentNode.left;
+		}
+		
+		while(!stack.isEmpty()) {
+			Node temp = stack.pop();
+			System.out.print(temp.data + " ");
+			
+			currentNode = temp.right;
+			
+			while(currentNode != null) {
+				stack.push(currentNode);
+				currentNode = currentNode.left;
+			}
+		}
+	}
+	
+	public void IterativePreOrder() {
+		Stack<Node> stack = new Stack<Node>();
+		Node currentNode = root;
+		while(currentNode != null) {
+			stack.push(currentNode);
+			System.out.print(currentNode.data + " ");
+			currentNode = currentNode.left;
+		}
+		
+		while(!stack.isEmpty()) {
+			Node temp = stack.pop();
+			
+			currentNode = temp.right;
+			
+			while(currentNode != null) {
+				stack.push(currentNode);
+				System.out.print(currentNode.data + " ");
+				currentNode = currentNode.left;
+			}
+		}
+	}
+	
+	public Node InversionOfTree(Node root) {
+		if(root == null) return null;
+		root.left = InversionOfTree(root.left);
+		root.right = InversionOfTree(root.right);
+		Node ref = root.left ;
+		root.left = root.right;
+		root.right = ref;
+		return root;
+	}
 }
