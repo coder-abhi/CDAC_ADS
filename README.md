@@ -57,22 +57,22 @@
     - [x] Printing in Inorder - Iterative
     - [x] Printing in Preorder - Iterative
     - [x] Printing in Postorder - Iterative
-    - [ ] Count frequency of Node in binary tree
+    - [ ] Count frequency of Node in a binary tree
 
 ## Day 9  - (08 NOV)
 - [ ] Binary Search Tree
     - [x] Insert
     - [ ] Mirror of tree / Inversion of tree
     - [x] Search and delete in BST
-    - [ ] Count no. of leaf node in BST
+    - [ ] Count no. of a leaf node in BST
     - [ ] Lever order printing
     - [ ] Height of Tree - using recursion
     - [ ] Height of tree - without recursion
 - [ ] Build a tree having unique values with
     - [ ] Inorder and Preorder traversal 
     - [ ] Inorder and Postorder traversal
-- [ ] find smallest element in a binary search tree
-- [ ] find largest element in a binary search tree.
+- [ ] find the smallest element in a binary search tree
+- [ ] find the largest element in a binary search tree.
     
 ## Day 10  - (10 NOV)
 - [ ] AVL Tree
@@ -82,17 +82,17 @@
 - [ ] B+ Tree
 - [ ] Linear search
 - [ ] Binary search
-- [ ] Find element in sorder array whick is rotated by K elements
+- [ ] Find a element in a sorted array that is rotated by K elements
 
 ## Day 11 - (11 NOV)
-- [ ] Bubble sort
-- [ ] Selection sort
-- [ ] Insertion sort
+- [x] Bubble sort
+- [x] Selection sort
+- [x] Insertion sort
 - [ ] Linear Search
 - [ ] Binary Search
 
 ## Day 12 - (12 NOV)
-- [ ] Quick sort - Dovide and Conquere
+- [ ] Quick sort - Divide and Conquer
 - [ ] Merge sort
 - [ ] Heap sort
 

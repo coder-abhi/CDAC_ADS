@@ -1,7 +1,6 @@
 package sorting;
 
 import java.util.Arrays;
-import java.util.Currency;
 
 public class InsertionSort {
 
