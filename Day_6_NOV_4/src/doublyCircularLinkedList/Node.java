@@ -1,4 +1,4 @@
-package doublyLinkedList;
+package doublyCircularLinkedList;
 
 public class Node {
 	int data;

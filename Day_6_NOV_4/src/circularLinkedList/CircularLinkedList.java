@@ -3,16 +3,18 @@ package circularLinkedList;
 public class CircularLinkedList implements CircularLinkListInter{
 	Node head;
 	public CircularLinkedList() {
-		head = null;
+		head = new Node(-1);
+		head.next = head;
 	}
 	
 	@Override
 	public void insert(int element) {
 		Node newElement = new Node(element);
 		
-		if(head == null) {
-			head = newElement;
-			head.next = head;
+		// if element is empty or have only 1 ele which is head(-1)
+		if(head.next == head) {
+			head.next = newElement;
+			newElement.next = head;
 			return;
 		}
 		/*
@@ -31,10 +33,10 @@ public class CircularLinkedList implements CircularLinkListInter{
 	
 	@Override
 	public void print() {
-		Node currNode = head;
-		if(head == null) {
+		Node currNode = head.next;
+		if(currNode == head) {
 			System.out.println("List is empty");
-			
+			return;
 		}
 		
 		while(currNode != head) {
@@ -48,16 +50,9 @@ public class CircularLinkedList implements CircularLinkListInter{
 
 	@Override
 	public void delete(int element) {
-		if(head == null) {
+		if(head.next == head) {
 			System.out.println("List is already Empty!");
 			return ;
-		}
-		
-		//if list has only one element
-		if(head.next == head) {
-			if(head.data == element) {
-				head = null;
-			}
 		}
 		
 		Node currNode = head.next;
@@ -70,6 +65,8 @@ public class CircularLinkedList implements CircularLinkListInter{
 			prev = currNode;
 			currNode = currNode.next;
 		}
+		System.out.println("Element not found!");
+		
 	}
 	
 }

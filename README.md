@@ -32,14 +32,14 @@
 
 ## Day 5  - (03 NOV)
 - [ ] Reverse a Linked List
-    - Using stack
-    - Using only Pointers
+    - [ ] Using stack
+    - [ ] Using only Pointers
 - [ ] Merge 2 Sorted Linked List
 - [x] Doubly Linked List - [Code](./Day_5_NOV_03/src/doublyLinkedList/DoublyLinkedList.java)
 
 ## Day 6  - (04 NOV)
-- [x] Circular Linked List
-- [ ] Doubly Circular Linked List - [Code](./Day_6_NOV_4/src/doublyLinkedList/DoublyCircularDummy.java)
+- [x] Circular Linked List - [Code](./Day_6_NOV_4/src/circularLinkedList/CircularLinkedList.java)
+- [x] Doubly Circular Linked List - [Code](./Day_6_NOV_4/src/doublyLinkedList/DoublyCircularDummy.java)
 
 ## Day 8  - (07 NOV)
 - [ ] Using array to allocate memory for all nodes of a Linked list
