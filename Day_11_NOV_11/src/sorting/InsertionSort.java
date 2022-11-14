@@ -3,6 +3,8 @@ package sorting;
 import java.util.Arrays;
 
 public class InsertionSort {
+	
+//	public static void insertionS
 
 	public static void main(String[] args) {
 		int arr[] = {12,3,54,21,90,01};
@@ -22,7 +24,6 @@ public class InsertionSort {
 			}
 			sortedSize++;
 		}
-		
 		System.out.println(Arrays.toString(arr));
 	}
 

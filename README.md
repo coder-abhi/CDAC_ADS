@@ -81,14 +81,12 @@
 - [ ] Trie
 - [ ] B Tree
 - [ ] B+ Tree
-- [ ] Linear search
-- [ ] Binary search
 - [ ] Find a element in a sorted array that is rotated by K elements
 
 ## Day 11 - (11 NOV)
-- [x] Bubble sort
-- [x] Selection sort
-- [x] Insertion sort
+- [x] Bubble sort - [code](./Day_11_NOV_11/src/sorting/BubbleSort.java)
+- [x] Selection sort - [code](./Day_11_NOV_11/src/sorting/SelectionSort.java)
+- [x] Insertion sort - [code](./Day_11_NOV_11/src/sorting/InsertionSort.java)
 - [ ] Linear Search
 - [ ] Binary Search
 
