@@ -91,8 +91,8 @@
 - [ ] Binary Search
 
 ## Day 12 - (12 NOV)
-- [ ] Quick sort - Divide and Conquer
-- [ ] Merge sort
+- [ ] Quick sort - Divide and Conquer - [code](./Day12_NOV_12/src/sorting/QuickSort.java)
+- [ ] Merge sort - Divide and Conquer - [code](./Day12_NOV_12/src/sorting/MergeSort.java)
 - [ ] Heap sort
 
 
