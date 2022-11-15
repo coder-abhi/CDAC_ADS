@@ -33,14 +33,21 @@ public class QueueUsingStack implements QueueInterface {
 		else System.out.println("Queue is already Full");
 	}
 
+	// we are creating delete costly Queue using stack
 	@Override
 	public int deleteQ() {
 		if(!isEmpty()) {
+			// coping all the elements from our stack to temporary stack
 			copy(stackMain,stackTemp);
+			
+			// poping last element of temporary stack
 			int resultEle = stackTemp.pop();
+			
+			// geting back all the remaining elements from temp stack to main stack
 			copy(stackTemp,stackMain);			
 			return resultEle;
-		}else {
+		}
+		else {
 			System.out.println("Queue is already Empty!!");
 			return -1;
 		}

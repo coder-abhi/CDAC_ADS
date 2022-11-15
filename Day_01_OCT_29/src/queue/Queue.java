@@ -1,5 +1,5 @@
 package queue;
-
+// Queue using array
 public class Queue implements QueueInterface {
 
 	int queueArray[];
@@ -28,7 +28,6 @@ public class Queue implements QueueInterface {
 
 	@Override
 	public void addQ(int element) {
-
 		if(!isFull()) {
 			this.queueArray[rear++] = element;
 		}

@@ -41,6 +41,7 @@ public class Stack implements StackInterface {
 		return -1;
 	}
 	
+	// reverse elements in stack
 	public void reverse(int index) {
 		Queue queueTemp = new Queue(index);
 		for(int i=0;i<index; i++) {

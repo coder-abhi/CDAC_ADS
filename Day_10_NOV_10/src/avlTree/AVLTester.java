@@ -17,7 +17,10 @@ public class AVLTester {
 		avl.insert(48);
 		avl.insert(60);
 		avl.insert(47);
+		avl.insert(49);
 		
+//		avl.delete(48);
+		avl.delete(40);
 //		System.out.println("Height of tree : "+avl.balanceFactor(avl.root));
 //		System.out.println("Height of tree : "+avl.balanceFactor(avl.root));
 //		System.out.println("Height of tree : "+avl.balanceFactor(avl.root));

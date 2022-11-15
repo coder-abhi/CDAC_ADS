@@ -98,25 +98,41 @@ public class AVL {
 	public Node inorderSuc(Node root) {
 		Node curr = root.right;
 
-		if(curr != null ) {
-			while(curr.left != null) curr = curr.left;			
-		}
+		while(curr.left != null) curr = curr.left;			
 
 		return curr;
 	}
+	
+	public Node deleteSuccesorChild(Node root, Node child) {
+		if(root == child) return child.right;
+		root.left = deleteSuccesorChild(root.left,child);
+		return root;
+	}
 
-	//	public Node deleteElement(Node root, int ele) {
-	//		if(root == null) return null;
-	//		
-	//		if(root.data == ele) {
-	//			
-	//		}
-	//		return null;
-	//	}
+	public Node deleteElement(Node root, int ele) {
+		if(root == null) return null;
+		
+		// if current node is out element
+		if(root.data == ele) {
+			
+			// if deleting node has only one child
+			if(root.left == null) return root.right;
+			if(root.right == null) return root.left;
+			
+			Node inorderSuccesor = inorderSuc(root);
+			root.data = inorderSuccesor.data;
+			root.right = deleteSuccesorChild(root.right,inorderSuccesor);
+			return root;
+			
+		}
+		root.left = deleteElement(root.left,ele);
+		root.right = deleteElement(root.right,ele);
+		return root;
+	}
 
-	//	public void delete(int ele) {
-	//		this.root = deleteElement(this.root,ele);
-	//	}
+	public void delete(int ele) {
+		this.root = deleteElement(this.root,ele);
+	}
 
 	public void levelOrderPrint() {
 		Queue<Node> queue = new LinkedList<Node>();
@@ -156,7 +172,7 @@ public class AVL {
 				Node ele = queue.remove();
 
 				if(ele.data == -1) {
-					line += " . ";
+					line += " - ";
 					queue2.add(new Node(-1));
 					queue2.add(new Node(-1));
 					continue;
@@ -169,7 +185,7 @@ public class AVL {
 				if(ele.right!= null) queue2.add(ele.right);
 				else queue2.add(new Node(-1));
 			}
-			if(flag == 1) System.out.println("\n"+formate(line, 60));
+			if(flag == 1) System.out.println("\n"+formate(line, 50));
 			line = "";
 			queue.addAll(queue2);
 			queue2.clear();

@@ -16,6 +16,7 @@ public class LinkedListSorted implements LinkedListInterf{
 			head = newElement;
 			return;
 		}
+		// if new element is less than first element then we add it at Front
 		if(element < head.data ) {
 			newElement.next = head;
 			head = newElement;
@@ -24,11 +25,13 @@ public class LinkedListSorted implements LinkedListInterf{
 		
 		Node prev = null;
 		Node currentNode = head;
+		//traversing till end of list && new Element is less than currend data
 		while(currentNode != null && currentNode.data <= element) {
-//			System.out.println("data : "+currentNode.data);
 			prev = currentNode;
 			currentNode = currentNode.next;
 		}
+		
+		// adding element before current
 		newElement.next = currentNode;
 		prev.next = newElement;
 	}
