@@ -38,8 +38,8 @@
 - [x] Doubly Linked List - [Code](./Day_05_NOV_03/src/doublyLinkedList/DoublyLinkedList.java)
 
 ## Day 6  - (04 NOV)
-- [x] Circular Linked List - [Code](./Day_6_NOV_04/src/circularLinkedList/CircularLinkedList.java)
-- [x] Doubly Circular Linked List - [Code](./Day_06_NOV_04/src/doublyLinkedList/DoublyCircularDummy.java)
+- [x] Circular Linked List - [Code](./Day_06_NOV_04/src/circularLinkedList/CircularLinkedList.java)
+- [x] Doubly Circular Linked List - [Code](./Day_06_NOV_04/src/doublyCircularLinkedList/DoublyCircularDummy.java)
 
 ## Day 8  - (07 NOV)
 - [ ] Using array to allocate memory for all nodes of a Linked list
@@ -78,6 +78,9 @@
     
 ## Day 10  - (10 NOV)
 - [ ] AVL Tree - [Code](./Day_10_NOV_10/src/avlTree/AVL.java)
+    - [x] Insert in AVL
+    - [x] Delete in AVL
+    - [x] Advance tree printing
 - [ ] Red Black tree
 - [ ] Trie
 - [ ] B Tree
@@ -92,8 +95,8 @@
 - [ ] Binary Search
 
 ## Day 12 - (12 NOV)
-- [x] Quick sort - Divide and Conquer - [code](./Day12_NOV_12/src/sorting/QuickSort.java)
-- [x] Merge sort - Divide and Conquer - [code](./Day12_NOV_12/src/sorting/MergeSort.java)
+- [x] Quick sort - Divide and Conquer - [code](./Day_12_NOV_12/src/sorting/QuickSort.java)
+- [x] Merge sort - Divide and Conquer - [code](./Day_12_NOV_12/src/sorting/MergeSort.java)
 - [ ] Heap sort
 
 
