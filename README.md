@@ -22,8 +22,8 @@
 -  J-Unit test cases
 
 ## Day 3  - (01 NOV)
-- [x] Singly Linked List - [Code](./Day_3_NOV_01/src/linkedList/LinkedList.java)
-- [x] Sorted Linked List - [Code](./Day_3_NOV_01/src/linkedListSorted/LinkedListSorted.java)
+- [x] Singly Linked List - [Code](./Day_3_NOV_01/)
+- [x] Sorted Linked List - [Code](./Day_3_NOV_01)
 
 
 ## Day 4  - (02 NOV)
@@ -100,5 +100,6 @@
 
 ## Exercise Quesions
 - [ ] Match Paranthesis - [Answer](./ExtraQuestionsADS/src/queueQuestions/ParenthesisMatch.java)
+- [ ] Remove Duplicate using Recursion - [Answer](./ExtraQuestionsADS/src/mumbaiADSPaper/StringDuplicate.java)
 
 

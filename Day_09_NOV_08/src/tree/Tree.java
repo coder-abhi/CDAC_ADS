@@ -5,6 +5,8 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
+import avlTree.Node;
+
 public class Tree{
 	Node root;
 	public static Scanner sc = new Scanner(System.in);
@@ -196,5 +198,50 @@ public class Tree{
 		
 		minimum = Math.min(root.data, minimum);
 		return Math.min(minTreeRecursive(root.left,minimum), minTreeRecursive(root.right,minimum)); 
+	}
+	
+	// For advance printin - optional
+	public int height(Node root) {
+		if(root == null)return 0;
+		return 1 + Math.max(height(root.left), height( root.right));
+	}
+	public String formate(String str, int len) {
+		len = len - str.length();
+		return " ".repeat(len/2) + str;
+	}
+	public void AdvancePrinting() {
+		Queue<Node> queue = new LinkedList<Node>();
+		Queue<Node> queue2 = new LinkedList<Node>();
+		queue.add(root);
+
+		int flag = 1;
+		int height =  (int) Math.pow(2, height(root)+1);
+		String line = "";
+		while(!queue.isEmpty() && flag == 1) {
+			flag = 0;
+			
+			while(!queue.isEmpty()) {
+				Node ele = queue.remove();
+
+				if(ele.data == -1) {
+					line += " . ";
+					queue2.add(new Node(-1));
+					queue2.add(new Node(-1));
+					continue;
+				}
+
+				line += " "+ele.data + " ";
+				flag = 1;
+				if(ele.left != null) queue2.add(ele.left);
+				else queue2.add(new Node(-1));
+				if(ele.right!= null) queue2.add(ele.right);
+				else queue2.add(new Node(-1));
+			}
+			if(flag == 1) System.out.println("\n"+formate(line, height));
+			line = "";
+			queue.addAll(queue2);
+			queue2.clear();
+			
+		}
 	}
 }
