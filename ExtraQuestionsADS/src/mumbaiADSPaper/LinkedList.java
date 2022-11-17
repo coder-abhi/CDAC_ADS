@@ -133,6 +133,7 @@ public class LinkedList {
 		Node prev = null;
 		Node currentNode = head;
 		while(currentNode != null) {
+			
 			if(!set.add(currentNode.data)) {
 				prev.next = currentNode.next;
 				

@@ -5,20 +5,19 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-import avlTree.Node;
-
 public class Tree{
 	Node root;
 	public static Scanner sc = new Scanner(System.in);
 	public Tree() {
 		root = null;
 	}
-	
+
 	// Creating a Tree
 	public void createTree() {
 		System.out.println("Enter Root data : ");
 		this.root = addElement(root);
 	}
+	
 	public Node addElement(Node root) {
 		int data = sc.nextInt();
 		if(data == -1) return null;
@@ -31,7 +30,7 @@ public class Tree{
 		
 		return root;
 		}
-	
+
 	// Printing Tree
 	public void Inorder(Node head) {
 		if(head.left != null) Inorder(head.left);
@@ -50,7 +49,7 @@ public class Tree{
 		if(head.right != null) Postorder(head.right);
 		System.out.print(head.data + " ");
 	}
-	
+
 	public void PrintInorder() {
 		if(root != null) Inorder(root);
 	}
@@ -83,27 +82,27 @@ public class Tree{
 	public int height() {
 		return CountHeight(root);
 	}
-	
+
 	public void levelOrderPrint() {
 		Queue<Node> queue = new LinkedList<Node>();
 		queue.add(root);
 		queue.add(null);
 		while(!queue.isEmpty()) {
 			Node ele = queue.remove();
-			
+	
 			if(ele == null) {
 				System.out.println();
 				if(!queue.isEmpty()) queue.add(null);
 				continue;
 			}
-			
+	
 			System.out.print(ele.data + " ");
 			
 			if(ele.left != null) queue.add(ele.left);
 			if(ele.right!= null) queue.add(ele.right);
 		}
 	}
-	
+
 	public void IterativeInOrder() {
 		Stack<Node> stack = new Stack<Node>();
 		Node currentNode = root;
@@ -111,20 +110,20 @@ public class Tree{
 			stack.push(currentNode);
 			currentNode = currentNode.left;
 		}
-		
+
 		while(!stack.isEmpty()) {
 			Node temp = stack.pop();
 			System.out.print(temp.data + " ");
-			
+
 			currentNode = temp.right;
-			
+
 			while(currentNode != null) {
 				stack.push(currentNode);
 				currentNode = currentNode.left;
 			}
 		}
 	}
-	
+
 	public void IterativePreOrder() {
 		Stack<Node> stack = new Stack<Node>();
 		Node currentNode = root;
@@ -133,10 +132,10 @@ public class Tree{
 			System.out.print(currentNode.data + " ");
 			currentNode = currentNode.left;
 		}
-		
+
 		while(!stack.isEmpty()) {
 			Node temp = stack.pop();
-			
+
 			currentNode = temp.right;
 			
 			while(currentNode != null) {
