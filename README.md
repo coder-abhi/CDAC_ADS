@@ -60,7 +60,7 @@
     - [ ] Count frequency of Node in a binary tree
 
 ## Day 9  - (08 NOV)
-- [ ] Binary Search Tree - [Code](./Day_09_NOV_08/src/bst/BST.java)
+- [x] Binary Search Tree - [Code](./Day_09_NOV_08/src/bst/BST.java)
     - [x] Insert
     - [x] Mirror of tree / Inversion of tree
     - [x] Search and delete in BST
@@ -77,7 +77,7 @@
 - [x] find the largest element in a binary search tree.  - [Code](./Day_09_NOV_08/src/bst/BST.java)
     
 ## Day 10  - (10 NOV)
-- [ ] AVL Tree - [Code](./Day_10_NOV_10/src/avlTree/AVL.java)
+- [x] AVL Tree - [Code](./Day_10_NOV_10/src/avlTree/AVL.java)
     - [x] Insert in AVL
     - [x] Delete in AVL
     - [x] Advance tree printing
@@ -91,8 +91,8 @@
 - [x] Bubble sort - [code](./Day_11_NOV_11/src/sorting/BubbleSort.java)
 - [x] Selection sort - [code](./Day_11_NOV_11/src/sorting/SelectionSort.java)
 - [x] Insertion sort - [code](./Day_11_NOV_11/src/sorting/InsertionSort.java)
-- [ ] Linear Search
-- [ ] Binary Search
+- [x] Linear Search - [code](./Day_11_NOV_11/src/searching/LinearSearch.java)
+- [x] Binary Search - [code](./Day_11_NOV_11/src/searching/BinarySearch.java)
 
 ## Day 12 - (12 NOV)
 - [x] Quick sort - Divide and Conquer - [code](./Day_12_NOV_12/src/sorting/QuickSort.java)
