@@ -97,7 +97,7 @@
 ## Day 12 - (12 NOV)
 - [x] Quick sort - Divide and Conquer - [code](./Day_12_NOV_12/src/sorting/QuickSort.java)
 - [x] Merge sort - Divide and Conquer - [code](./Day_12_NOV_12/src/sorting/MergeSort.java)
-- [ ] Heap sort
+- [x] Heap sort - [code](./Day_12_NOV_12/src/sorting/HeapSort.java)
 
 
 ---
